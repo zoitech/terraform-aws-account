@@ -9,8 +9,7 @@ Terraform module which setup the most generic aws-accounts settings.
 ## Usage
 ```hcl
 module "account" {
-  source = "zoitech/terraform_aws_account"
-
+  source = "zoitech/account/aws"
   account_name = "my-aws-account"
 }
 ```
