@@ -24,3 +24,11 @@ variable "password_max_age" {
   description = "The maximum age before a password will expire."
   default = 0
 }
+variable "trail_name" {
+  description = "Name of the cloudtrail trail."
+  default = "Default"
+}
+variable "trail_bucketname" {
+  description = "Name of the cloudtrail bucket. Will defaults to <account-id>-logs."
+  default = ""
+}

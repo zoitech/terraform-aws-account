@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "cloudtrail_bucket" {
-    bucket = "${data.aws_caller_identity.current.account_id}-logs"
+    bucket = "${length(var.trail_bucketname) > 0 ? var.trail_bucketname : "${data.aws_caller_identity.current.account_id}-logs"}"
     acl = "private"
 }
 

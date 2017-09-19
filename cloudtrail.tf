@@ -1,6 +1,6 @@
 # CloudTrail
 resource "aws_cloudtrail" "global_Default" {
-    name = "Default"
+    name = "${trail_name}"
     s3_bucket_name = "${aws_s3_bucket.cloudtrail_bucket.id}"
     is_multi_region_trail = true
     include_global_service_events = true
