@@ -32,3 +32,7 @@ variable "trail_bucketname" {
   description = "Name of the cloudtrail bucket. Will defaults to <account-id>-logs."
   default = ""
 }
+variable "trail_bucketname_create" {
+  description = "Defines if the bucket should be created."
+  default = 1
+}
