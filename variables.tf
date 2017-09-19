@@ -20,3 +20,7 @@ variable "password_hard_expiry" {
   description = "Requires administrative reset of the user after expiring."
   default = false
 }
+variable "password_max_age" {
+  description = "The maximum age before a password will expire."
+  default = 0
+}

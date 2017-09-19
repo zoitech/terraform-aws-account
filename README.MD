@@ -1,8 +1,7 @@
 # AWS generic account setup
-================================================
+-----
 
-Terraform module sets up the generic accounts settings.
-It helps you configuring the general generic account settings:
+Terraform module which sets up the most aws generic accounts settings.
 * Set account alias
 * Set password policy
 * Add a logging bucket
