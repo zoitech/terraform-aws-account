@@ -15,7 +15,7 @@ module "account" {
 ```
 
 ## Authors
-Module managed by [Malte Brodersen](https://github.com/derbrobro).
+Module managed by [Zoi](https://github.com/zoitech).
 
 ## License
 MIT License. See LICENSE for full details.
