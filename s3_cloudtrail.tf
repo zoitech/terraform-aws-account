@@ -1,11 +1,12 @@
 resource "aws_s3_bucket" "cloudtrail_bucket" {
-    bucket = "${local.bucket_name}"
-    acl = "private"
-    count = "${var.trail_bucketname_create}"
+  bucket = "${local.bucket_name}"
+  acl    = "private"
+  count  = "${var.trail_bucketname_create}"
 }
 
 resource "aws_s3_bucket_policy" "cloudtrail_bucket_policy" {
   bucket = "${aws_s3_bucket.cloudtrail_bucket.bucket}"
+
   policy = <<EOF
 {
     "Version": "2012-10-17",
