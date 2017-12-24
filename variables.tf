@@ -44,3 +44,13 @@ variable "trail_bucketname_create" {
   description = "Defines if the bucket should be created."
   default     = 1
 }
+
+variable "trail_bucket_default_encryption" {
+  description = "Defines if the Bucket is encrypted, defaults to AES256"
+  default     = "AES256"
+}
+
+variable "trail_bucket_default_encryption_key" {
+  description = "Defines if the KMS encryption key, used if trail_bucket_default_encryption is set to aws:kms"
+  default     = ""
+}
