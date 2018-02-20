@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
   bucket = "${local.bucket_name}"
   acl    = "private"
   count  = "${var.trail_bucketname_create}"
-  
+
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
@@ -11,6 +11,8 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
       }
     }
   }
+
+  tags = "${merge(var.tags, map("Name", format("%s", local.bucket_name)))}"
 }
 
 resource "aws_s3_bucket_policy" "cloudtrail_bucket_policy" {
