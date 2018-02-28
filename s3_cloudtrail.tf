@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
     }
   }
 
-  tags = "${merge(var.tags, map("Name", format("%s", local.bucket_name)))}"
+  tags = "${merge(var.tags, map(var.name_tag_name, format("%s", local.bucket_name)))}"
 }
 
 resource "aws_s3_bucket_policy" "cloudtrail_bucket_policy" {

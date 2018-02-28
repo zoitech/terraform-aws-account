@@ -58,4 +58,10 @@ variable "trail_bucket_default_encryption_key" {
 variable "tags" {
   description = "A map of tags to add to all resources"
   default     = {}
+  type        = "map"
+}
+
+variable "name_tag_name" {
+  description = "Name of the 'name' tag that is added to, for example, the S3 resources"
+  default     = "Name"
 }
