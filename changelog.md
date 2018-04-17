@@ -1,17 +1,18 @@
 ## 0.0.5 (Unreleased)
 
-BACKWARDS INCOMPATIBILITIES / NOTES:
-
-* ##DESCRIPTION## [##PR##]
-
 NEW FEATURES:
 
-* added new policy to prevent users causing huge costs
+* ##added new policy to prevent users causing huge costs##
+
+BACKWARDS INCOMPATIBILITIES / NOTES:
+
+* n.a.
+
 
 IMPROVEMENTS:
 
-* ##DESCRIPTION## [##PR##]
+* n.a.
 
 BUG FIXES:
 
-* ##DESCRIPTION## [##PR##]
+* n.a.
