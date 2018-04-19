@@ -65,3 +65,48 @@ variable "name_tag_name" {
   description = "Name of the 'name' tag that is added to, for example, the S3 resources"
   default     = "Name"
 }
+
+variable "EC2_Limit_Name" {
+  description = "Name of the IAM_Policy for EC2 Limit"
+  default     = "AmazonEC2LimitInstanceCreation"
+}
+
+variable "EC2_Limit_Count" {
+  description = "Activate (1) or deactivate (0) this policy"
+  default     = "1"
+}
+
+variable "EC2_Limit_Type" {
+  description = "Type of EC2 Instances, for example, xlarge; wildcards can be used"
+  default     = "*xlarge"
+}
+
+variable "RDS_Limit_Name" {
+  description = "Name of the IAM_Policy for RDS Limit"
+  default     = "AmazonRDSLimitInstanceCreation"
+}
+
+variable "RDS_Limit_Count" {
+  description = "Activate (1) or deactivate (0) this policy"
+  default     = "1"
+}
+
+variable "RDS_Limit_Type" {
+  description = "Type of RDS Instances, for example, xlarge; wildcards can be used"
+  default     = "*xlarge"
+}
+
+variable "Reserved_Instances_Limit_Name" {
+  description = "Name of the IAM_Policy for Reserved Instances Limit"
+  default     = "AmazonRILimitInstanceCreation"
+}
+
+variable "Reserved_Instances_Limit_Count" {
+  description = "Activate (1) or deactivate (0) this policy"
+  default     = "1"
+}
+
+variable "Reserved_Instances_Limit_Action" {
+  description = "Restrict Action for example {ec2:ModifyReservedInstances, ec2:PurchaseReservedInstancesOffering, ec2:DescribeReservedInstancesOfferings}"
+  default     = "EC2:PurchaseReservedInstancesOffering"
+}
