@@ -4,6 +4,7 @@ Terraform module which setup the most generic aws-accounts settings.
 * Set password policy
 * Add a logging bucket
 * Enable CloudTail
+* Create IAM_Policy
 
 
 ## Usage

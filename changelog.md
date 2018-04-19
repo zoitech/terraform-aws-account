@@ -2,7 +2,8 @@
 
 NEW FEATURES:
 
-* ##added new policy to prevent users causing huge costs##
+* Added new policy to prevent users causing huge costs
+* Created Changelog.md
 
 BACKWARDS INCOMPATIBILITIES / NOTES:
 
@@ -11,7 +12,7 @@ BACKWARDS INCOMPATIBILITIES / NOTES:
 
 IMPROVEMENTS:
 
-* n.a.
+* formatted tf-files
 
 BUG FIXES:
 
