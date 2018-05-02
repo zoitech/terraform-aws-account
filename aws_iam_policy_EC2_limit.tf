@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "deny_expensive_ec2_instances" {
-  name        = "${var.ec2_limit_name}"
-  count       = "${var.ec2_limit_count}"
+  name        = "${var.create_ec2_limit_policy_name}"
+  count       = "${var.create_ec2_limit_policy}"
   description = "Policy to limit creation of expensive EC2 Instances"
 
   policy = <<EOF

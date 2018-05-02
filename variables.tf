@@ -66,12 +66,12 @@ variable "name_tag_name" {
   default     = "Name"
 }
 
-variable "ec2_limit_name" {
+variable "create_ec2_limit_policy_name" {
   description = "Name of the IAM_Policy for EC2 Limit"
   default     = "AmazonEC2LimitInstanceCreation"
 }
 
-variable "ec2_limit_count" {
+variable "create_ec2_limit_policy" {
   description = "Activate (1) or deactivate (0) this policy"
   default     = "0"
 }
@@ -81,12 +81,12 @@ variable "ec2_limit_type" {
   default     = "*xlarge"
 }
 
-variable "rds_limit_name" {
+variable "create_rds_limit_policy_name" {
   description = "Name of the IAM_Policy for RDS Limit"
   default     = "AmazonRDSLimitInstanceCreation"
 }
 
-variable "rds_limit_count" {
+variable "create_rds_limit_policy" {
   description = "Activate (1) or deactivate (0) this policy"
   default     = "0"
 }
@@ -96,27 +96,22 @@ variable "rds_limit_type" {
   default     = "*xlarge"
 }
 
-variable "reserved_instances_limit_name" {
+variable "create_reserved_instances_limit_policy_name" {
   description = "Name of the IAM_Policy for Reserved Instances Limit"
   default     = "AmazonRILimitInstanceCreation"
 }
 
-variable "reserved_instances_limit_count" {
+variable "create_reserved_instances_limit_policy" {
   description = "Activate (1) or deactivate (0) this policy"
   default     = "0"
 }
 
-variable "reserved_instances_limit_action" {
-  description = "Restrict Action for example {ec2:ModifyReservedInstances, ec2:PurchaseReservedInstancesOffering, ec2:DescribeReservedInstancesOfferings}"
-  default     = "EC2:PurchaseReservedInstancesOffering"
-}
-
-variable "marketplace_deny_name" {
+variable "create_marketplace_disable_policy_name" {
   description = "Disables Access to marketplace software"
-  default = "deny_marketplace"
+  default     = "deny_marketplace"
 }
 
-variable "marketplace_deny_count" {
+variable "create_marketplace_disable_policy" {
   description = "Activate (1) or deactivate (0) this policy"
-  default = "0"
+  default     = "0"
 }

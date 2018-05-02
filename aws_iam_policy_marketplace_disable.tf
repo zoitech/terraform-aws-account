@@ -1,10 +1,10 @@
-resource "aws_iam_policy" "deny_marketplace" {
-  name        = "${var.marketplace_deny_name}"
-  count       = "${var.marketplace_deny_count}"
+resource "aws_iam_policy" "disable_marketplace" {
+  name        = "${var.create_marketplace_disable_policy_name}"
+  count       = "${var.create_marketplace_disable_policy}"
   description = "Policy to deny installing software from the marketplace"
 
   policy = <<EOF
-  {
+{
     "Version": "2012-10-17",
     "Statement": [
       {

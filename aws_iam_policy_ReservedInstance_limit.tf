@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "deny_expensive_RI_instances" {
-  name        = "${var.reserved_instances_limit_name}"
-  count       = "${var.reserved_instances_limit_count}"
+  name        = "${var.create_reserved_instances_limit_policy_name}"
+  count       = "${var.create_reserved_instances_limit_policy}"
   description = "Policy to limit Reserved Instances"
 
   policy = <<EOF
@@ -9,7 +9,7 @@ resource "aws_iam_policy" "deny_expensive_RI_instances" {
     "Statement": [
           {
             "Effect": "Deny",
-            "Action": ["${var.reserved_instances_limit_action}"],
+            "Action": ["ec2:ModifyReservedInstances", "ec2:PurchaseReservedInstancesOffering"],
             "Resource": "*"
         }
     ]
