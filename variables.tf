@@ -76,7 +76,7 @@ variable "create_ec2_limit_policy" {
   default     = "0"
 }
 
-variable "ec2_limit_type" {
+variable "create_ec2_limit_policy_type" {
   description = "Type of EC2 Instances, for example, xlarge; wildcards can be used"
   default     = "*xlarge"
 }
@@ -91,7 +91,7 @@ variable "create_rds_limit_policy" {
   default     = "0"
 }
 
-variable "rds_limit_type" {
+variable "create_rds_limit_policy_type" {
   description = "Type of RDS Instances, for example, xlarge; wildcards can be used"
   default     = "*xlarge"
 }

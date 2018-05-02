@@ -15,7 +15,7 @@ resource "aws_iam_policy" "deny_expensive_ec2_instances" {
             "Condition": {
                 "StringLike": {
                     "ec2:InstanceType": [
-                        "${var.ec2_limit_type}"
+                        "${var.create_ec2_limit_policy_type}"
                     ]
                 }
             }

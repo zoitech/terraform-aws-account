@@ -15,7 +15,7 @@ resource "aws_iam_policy" "deny_expensive_RDS_instances" {
             "Condition": {
                 "StringLike": {
                     "rds:DatabaseClass": [
-                        "${var.rds_limit_type}"
+                        "${var.create_rds_limit_policy_type}"
                     ]
                 }
             }

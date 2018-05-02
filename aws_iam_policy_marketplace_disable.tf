@@ -9,7 +9,6 @@ resource "aws_iam_policy" "disable_marketplace" {
     "Statement": [
       {
         "Action": [
-          "aws-marketplace:ViewSubscriptions",
           "aws-marketplace:Subscribe",
           "aws-marketplace:Unsubscribe"
         ],
