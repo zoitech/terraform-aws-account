@@ -66,47 +66,57 @@ variable "name_tag_name" {
   default     = "Name"
 }
 
-variable "EC2_Limit_Name" {
+variable "ec2_limit_name" {
   description = "Name of the IAM_Policy for EC2 Limit"
   default     = "AmazonEC2LimitInstanceCreation"
 }
 
-variable "EC2_Limit_Count" {
+variable "ec2_limit_count" {
   description = "Activate (1) or deactivate (0) this policy"
-  default     = "1"
+  default     = "0"
 }
 
-variable "EC2_Limit_Type" {
+variable "ec2_limit_type" {
   description = "Type of EC2 Instances, for example, xlarge; wildcards can be used"
   default     = "*xlarge"
 }
 
-variable "RDS_Limit_Name" {
+variable "rds_limit_name" {
   description = "Name of the IAM_Policy for RDS Limit"
   default     = "AmazonRDSLimitInstanceCreation"
 }
 
-variable "RDS_Limit_Count" {
+variable "rds_limit_count" {
   description = "Activate (1) or deactivate (0) this policy"
-  default     = "1"
+  default     = "0"
 }
 
-variable "RDS_Limit_Type" {
+variable "rds_limit_type" {
   description = "Type of RDS Instances, for example, xlarge; wildcards can be used"
   default     = "*xlarge"
 }
 
-variable "Reserved_Instances_Limit_Name" {
+variable "reserved_instances_limit_name" {
   description = "Name of the IAM_Policy for Reserved Instances Limit"
   default     = "AmazonRILimitInstanceCreation"
 }
 
-variable "Reserved_Instances_Limit_Count" {
+variable "reserved_instances_limit_count" {
   description = "Activate (1) or deactivate (0) this policy"
-  default     = "1"
+  default     = "0"
 }
 
-variable "Reserved_Instances_Limit_Action" {
+variable "reserved_instances_limit_action" {
   description = "Restrict Action for example {ec2:ModifyReservedInstances, ec2:PurchaseReservedInstancesOffering, ec2:DescribeReservedInstancesOfferings}"
   default     = "EC2:PurchaseReservedInstancesOffering"
+}
+
+variable "marketplace_deny_name" {
+  description = "Disables Access to marketplace software"
+  default = "deny_marketplace"
+}
+
+variable "marketplace_deny_count" {
+  description = "Activate (1) or deactivate (0) this policy"
+  default = "0"
 }

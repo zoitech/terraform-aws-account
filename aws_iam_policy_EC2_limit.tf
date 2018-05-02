@@ -1,6 +1,6 @@
-resource "aws_iam_policy" "deny_expensive_EC2_instances" {
-  name        = "${var.EC2_Limit_Name}"
-  count       = "${var.EC2_Limit_Count}"
+resource "aws_iam_policy" "deny_expensive_ec2_instances" {
+  name        = "${var.ec2_limit_name}"
+  count       = "${var.ec2_limit_count}"
   description = "Policy to limit creation of expensive EC2 Instances"
 
   policy = <<EOF
@@ -15,7 +15,7 @@ resource "aws_iam_policy" "deny_expensive_EC2_instances" {
             "Condition": {
                 "StringLike": {
                     "ec2:InstanceType": [
-                        "${var.EC2_Limit_Type}"
+                        "${var.ec2_limit_type}"
                     ]
                 }
             }

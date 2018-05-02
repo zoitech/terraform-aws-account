@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "deny_expensive_RDS_instances" {
-  name        = "${var.RDS_Limit_Name}"
-  count       = "${var.RDS_Limit_Count}"
+  name        = "${var.rds_limit_name}"
+  count       = "${var.rds_limit_count}"
   description = "Policy to limit creation of expensive RDS Instances"
 
   policy = <<EOF
@@ -15,7 +15,7 @@ resource "aws_iam_policy" "deny_expensive_RDS_instances" {
             "Condition": {
                 "StringLike": {
                     "rds:DatabaseClass": [
-                        "${var.RDS_Limit_Type}"
+                        "${var.rds_limit_type}"
                     ]
                 }
             }
