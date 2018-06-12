@@ -115,3 +115,8 @@ variable "create_marketplace_disable_policy" {
   description = "Activate (1) or deactivate (0) this policy"
   default     = "0"
 }
+
+variable "guardduty_enable" {
+  description = "Defines if guardduty should be enabled."
+  default     = 0
+}

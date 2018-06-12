@@ -1,22 +1,27 @@
-## 0.0.5 (Unreleased)
+## 0.0.6 (Unreleased)
 
 NEW FEATURES:
-
-* Added new policies to prevent users causing huge costs
-* Created Changelog.md
-
+* n.a.
 
 BACKWARDS INCOMPATIBILITIES / NOTES:
-
 * n.a.
-
 
 IMPROVEMENTS:
-
-* formatted tf-files
-
-
-BUG FIXES:
-
 * n.a.
 
+BUG FIXES:
+* n.a.
+
+## 0.0.5
+
+NEW FEATURES:
+* Support of GuardDuty (set ```guardduty_enable=1```)
+
+BACKWARDS INCOMPATIBILITIES / NOTES:
+* n.a.
+
+IMPROVEMENTS:
+* formatted tf-files
+
+BUG FIXES:
+* n.a.
