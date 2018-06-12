@@ -24,4 +24,5 @@ IMPROVEMENTS:
 * formatted tf-files
 
 BUG FIXES:
-* n.a.
+* Dependency of Bucket and BucketPolicy
+* Usage of external Buckets
