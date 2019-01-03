@@ -7,7 +7,7 @@ BACKWARDS INCOMPATIBILITIES / NOTES:
 * n.a.
 
 IMPROVEMENTS:
-* n.a.
+* Add Public Access Block for Cloudtrail S3 Bucket
 
 BUG FIXES:
 * n.a.
