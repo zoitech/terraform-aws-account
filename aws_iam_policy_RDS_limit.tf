@@ -1,6 +1,6 @@
 resource "aws_iam_policy" "deny_expensive_RDS_instances" {
-  name        = "${var.create_rds_limit_policy_name}"
-  count       = "${var.create_rds_limit_policy}"
+  name        = var.create_rds_limit_policy_name
+  count       = var.create_rds_limit_policy
   description = "Policy to limit creation of expensive RDS Instances"
 
   policy = <<EOF
@@ -23,4 +23,6 @@ resource "aws_iam_policy" "deny_expensive_RDS_instances" {
     ]
 }
 EOF
+
 }
+
