@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
   tags = merge(
     var.tags,
     {
-      var.name_tag_name = format("%s", local.bucket_name)
+      "${var.name_tag_name}" = local.bucket_name
     },
   )
 
