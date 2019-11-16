@@ -1,4 +1,9 @@
-## 0.0.6 (Unreleased)
+## 1.0.0
+
+BACKWARDS INCOMPATIBILITIES / NOTES:
+* Works with terraform 0.12.x ([#15](https://github.com/zoitech/terraform-aws-account/issues/15)) 
+
+## 0.0.6
 
 NEW FEATURES:
 * n.a.

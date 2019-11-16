@@ -1,4 +1,5 @@
-data "aws_caller_identity" "current" {}
+data "aws_caller_identity" "current" {
+}
 
 variable "aws_region" {
   description = "The AWS region to deploy into (e.g. us-east-1)."
@@ -58,7 +59,7 @@ variable "trail_bucket_default_encryption_key" {
 variable "tags" {
   description = "A map of tags to add to all resources"
   default     = {}
-  type        = "map"
+  type        = map(string)
 }
 
 variable "name_tag_name" {
@@ -120,3 +121,4 @@ variable "guardduty_enable" {
   description = "Defines if guardduty should be enabled."
   default     = 0
 }
+
