@@ -3,6 +3,10 @@
 BACKWARDS INCOMPATIBILITIES / NOTES:
 * Works with terraform 0.12.x ([#15](https://github.com/zoitech/terraform-aws-account/issues/15)) 
 
+
+BUG FIXES:
+* Fix provider constraint ([#12](https://github.com/zoitech/terraform-aws-account/issues/12))
+
 ## 0.0.6
 
 NEW FEATURES:
