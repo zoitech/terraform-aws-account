@@ -4,6 +4,7 @@ BACKWARDS INCOMPATIBILITIES / NOTES:
 
 * Works with terraform 0.12.x ([#15](https://github.com/zoitech/terraform-aws-account/issues/15))
 * Variable "trail_bucketname_create" renamed to "create_cloudtrail_bucket" ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
+* Variable "guardduty_enable" renamed to "create_guardduty_detector" ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
 
 BUG FIXES:
 
@@ -12,6 +13,8 @@ BUG FIXES:
 IMPROVEMENTS:
 
 * Added count to make cloudtrail optional ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
+* Added count to make guardduty detector optional ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
+* Updated README.md ([#9](https://github.com/zoitech/terraform-aws-account/issues/9))
 
 ## 0.0.6
 

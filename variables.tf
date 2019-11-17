@@ -123,9 +123,14 @@ variable "create_marketplace_disable_policy" {
   default     = "0"
 }
 
-# guard duty
-variable "guardduty_enable" {
+# guardduty detector
+variable "create_guardduty_detector" {
   description = "Defines if guardduty should be enabled."
-  default     = 0
+  default     = false
+}
+
+variable "enable_guardduty_detector" {
+  description "Enable/disable guardduty detector"
+  default = true
 }
 

@@ -40,6 +40,19 @@ module "account" {
 }
 ```
 
+### Guardduty Detector
+
+Guardduty detector will be created and enabled by default.
+
+```hcl
+module "account" {
+  source                    = "git::https://github.com/zoitech/terraform-aws-account.git"
+  account_name              = "my-aws-account"
+  create_guardduty_detector = true
+  enable_guardduty_detector = true
+}
+```
+
 ### To Reference A Tagged Version of the Repository
 
 To reference a tagged version of the repository:
