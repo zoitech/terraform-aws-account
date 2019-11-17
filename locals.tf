@@ -1,4 +1,7 @@
 locals {
-  bucket_name = length(var.trail_bucketname) > 0 ? var.trail_bucketname : "${data.aws_caller_identity.current.account_id}-logs"
+  # cloudtrail
+  create_cloudtrail        = (var.create_cloudtrail == true ? 1 : 0)
+  create_cloudtrail_bucket = (var.create_cloudtrail_bucket == true && var.create_cloudtrail == true ? 1 : 0)
+  cloudtrail_bucket_name   = length(var.cloudtrail_bucketname) > 0 ? var.cloudtrail_bucketname : "${data.aws_caller_identity.current.account_id}-logs"
 }
 

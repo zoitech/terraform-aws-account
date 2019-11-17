@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "cloudtrail_bucket" {
-  bucket = local.bucket_name
+  count  = local.create_cloudtrail_bucket
+  bucket = local.cloudtrail_bucket_name
   acl    = "private"
-  count  = var.trail_bucketname_create
 
   server_side_encryption_configuration {
     rule {
