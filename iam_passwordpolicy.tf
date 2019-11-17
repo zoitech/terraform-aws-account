@@ -1,5 +1,6 @@
 # IAM Settings
 resource "aws_iam_account_password_policy" "strict" {
+  count                          = local.create_account_password_policy
   minimum_password_length        = var.password_min_length
   require_uppercase_characters   = true
   require_lowercase_characters   = true
