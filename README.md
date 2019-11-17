@@ -16,9 +16,8 @@ This module creates the following resources:
 
 ```hcl
 module "account" {
-  source       = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region       = "eu-central-1"
-  account_name = "my-aws-account"
+  source              = "git::https://github.com/zoitech/terraform-aws-account.git"
+  region              = "eu-central-1"
 }
 ```
 
@@ -47,7 +46,6 @@ The "cloudtrail_bucketname" can be the name of an existing bucket (set "create_c
 module "account" {
   source                   = "git::https://github.com/zoitech/terraform-aws-account.git"
   region                   = "eu-central-1"
-  account_alias            = "my-aws-account"
   create_cloudtrail        = true
   cloudtrail_name          = "my-cloudtrail"
   create_cloudtrail_bucket = true
@@ -63,7 +61,6 @@ Guardduty detector will be created and enabled by default.
 module "account" {
   source                    = "git::https://github.com/zoitech/terraform-aws-account.git"
   region                    = "eu-central-1"
-  account_alias             = "my-aws-account"
   create_guardduty_detector = true
   enable_guardduty_detector = true
 }
@@ -77,7 +74,6 @@ To reference a tagged version of the repository:
 module "network" {
   source        = "git::https://github.com/zoitech/terraform-aws-account.git?ref=v0.0.5"
   region        = "eu-central-1"
-  account_alias = "my-aws-account"
 }
 ```
 

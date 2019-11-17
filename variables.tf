@@ -9,15 +9,15 @@ variable "create_account_alias" {
   default     = true
 }
 
+variable "account_alias" {
+  description = "The alias for the account, which can be used instead of the account ID when logging in."
+  default     = "not_set"
+}
+
 # account password policy
 variable "create_account_password_policy" {
   description = "Defines if an account password policy should be created"
   default     = true
-}
-
-variable "account_alias" {
-  description = "The alias for the account, which can be used instead of the account ID when logging in."
-  default     = "not_set"
 }
 
 # password policy
