@@ -15,8 +15,8 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
   tags = merge(
     var.tags,
     {
-      var.name_tag_name = format("%s", local.cloudtrail_bucket_name)
-    },
+      "${var.name_tag_name}" = local.cloudtrail_bucket_name
+    }
   )
 
   policy = <<EOF
@@ -45,7 +45,7 @@ EOF
 }
 
 resource "aws_s3_bucket_public_access_block" "cloudtrail_bucket" {
-  count                   = var.create_cloudtrail_bucket
+  count                   = local.create_cloudtrail_bucket
   bucket                  = aws_s3_bucket.cloudtrail_bucket[0].id
   block_public_acls       = true
   block_public_policy     = true

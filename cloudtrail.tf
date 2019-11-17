@@ -9,7 +9,7 @@ resource "aws_cloudtrail" "global_Default" {
   tags = merge(
     var.tags,
     {
-      var.name_tag_name = format("%s", var.trail_name)
+      "${var.name_tag_name}" = var.cloudtrail_name
     },
   )
 }
