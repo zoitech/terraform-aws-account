@@ -142,7 +142,7 @@ variable "create_guardduty_detector" {
 }
 
 variable "enable_guardduty_detector" {
-  description "Enable/disable guardduty detector"
-  default = true
+  description = "Enable/disable guardduty detector"
+  default     = true
 }
 
