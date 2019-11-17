@@ -33,6 +33,12 @@ variable "password_max_age" {
 }
 
 # cloud trail
+
+variable "create_trail_bucket" {
+  description = "Defines if the bucket should be created."
+  default     = 1
+}
+
 variable "trail_name" {
   description = "Name of the cloudtrail trail."
   default     = "Default"
@@ -41,11 +47,6 @@ variable "trail_name" {
 variable "trail_bucketname" {
   description = "Name of the cloudtrail bucket. Will defaults to <account-id>-logs."
   default     = ""
-}
-
-variable "trail_bucketname_create" {
-  description = "Defines if the bucket should be created."
-  default     = 1
 }
 
 variable "trail_bucket_default_encryption" {
