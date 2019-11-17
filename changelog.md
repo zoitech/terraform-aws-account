@@ -19,6 +19,10 @@ IMPROVEMENTS:
 * Added count to make account alias optional ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
 * Updated README.md ([#9](https://github.com/zoitech/terraform-aws-account/issues/9))
 
+NEW FEATURES:
+
+* Added EC2 key pair resource ([#18](https://github.com/zoitech/terraform-aws-account/issues/18))
+
 ## 0.0.6
 
 NEW FEATURES:

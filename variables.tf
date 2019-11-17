@@ -146,3 +146,18 @@ variable "enable_guardduty_detector" {
   default     = true
 }
 
+# ec2 key pair
+variable "create_key_pair" {
+  description = "Defines if key pair should be created."
+  default     = false
+}
+
+variable "key_name" {
+  description = "The name of the public key"
+  default     = "default_key"
+}
+
+variable "public_key" {
+  description = "The public key value"
+  default     = null
+}
