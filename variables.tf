@@ -79,7 +79,7 @@ variable "tags" {
   type        = map(string)
 }
 
-variable "name_tag_name" {
+variable "tag_name" {
   description = "Name of the 'name' tag that is added to, for example, the S3 resources"
   default     = "Name"
 }

@@ -6,6 +6,7 @@ BACKWARDS INCOMPATIBILITIES / NOTES:
 * Variable "trail_bucketname_create" renamed to "create_cloudtrail_bucket" ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
 * Variable "guardduty_enable" renamed to "create_guardduty_detector" ([#16](https://github.com/zoitech/terraform-aws-account/issues/16))
 * Variable "account_name" renamed to "account_alias"
+* Variable "name_tag_name" renamed to "tag_name"
 
 BUG FIXES:
 
