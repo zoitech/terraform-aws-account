@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
   tags = merge(
     var.tags,
     {
-      var.name_tag_name = format("%s", local.bucket_name)
+      var.name_tag_name = format("%s", local.cloudtrail_bucket_name)
     },
   )
 
@@ -28,14 +28,14 @@ resource "aws_s3_bucket" "cloudtrail_bucket" {
             "Effect": "Allow",
             "Principal": {"Service": "cloudtrail.amazonaws.com"},
             "Action": "s3:GetBucketAcl",
-            "Resource": "arn:aws:s3:::${local.bucket_name}"
+            "Resource": "arn:aws:s3:::${local.cloudtrail_bucket_name}"
         },
         {
             "Sid": "AWSCloudTrailWrite20150319",
             "Effect": "Allow",
             "Principal": {"Service": "cloudtrail.amazonaws.com"},
             "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::${local.bucket_name}/AWSLogs/${data.aws_caller_identity.current.account_id}/*",
+            "Resource": "arn:aws:s3:::${local.cloudtrail_bucket_name}/AWSLogs/${data.aws_caller_identity.current.account_id}/*",
             "Condition": {"StringEquals": {"s3:x-amz-acl": "bucket-owner-full-control"}}
         }
     ]
@@ -45,8 +45,8 @@ EOF
 }
 
 resource "aws_s3_bucket_public_access_block" "cloudtrail_bucket" {
+  count                   = var.create_cloudtrail_bucket
   bucket                  = aws_s3_bucket.cloudtrail_bucket[0].id
-  count                   = var.trail_bucketname_create
   block_public_acls       = true
   block_public_policy     = true
   ignore_public_acls      = true
