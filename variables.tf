@@ -1,10 +1,16 @@
+# region
 variable "aws_region" {
   description = "The AWS region to deploy into (e.g. us-east-1)."
   default     = "eu-central-1"
 }
+# account alias
+variable "create_account_alias" {
+  description = "Defines if an account alias should be created."
+  default     = true
+}
 
-variable "account_name" {
-  description = "The name of the account."
+variable "account_alias" {
+  description = "The alias for the account, which can be used instead of the account ID when logging in."
   default     = "not_set"
 }
 
@@ -125,7 +131,7 @@ variable "create_marketplace_disable_policy" {
 
 # guardduty detector
 variable "create_guardduty_detector" {
-  description = "Defines if guardduty should be enabled."
+  description = "Defines if guardduty detectory should be created."
   default     = false
 }
 

@@ -21,6 +21,19 @@ module "account" {
 }
 ```
 
+### Account Alias
+
+Account alias is enabled by default and has the default name "not_set".
+
+```hcl
+module "account" {
+  source                    = "git::https://github.com/zoitech/terraform-aws-account.git"
+  account_name              = "my-aws-account"
+  create_acount_alias       = true
+  account_alias             = "my-aws-account"
+}
+```
+
 ### CloudTrail
 
 Cloudtrail and a cloudtrail bucket will be created by default. To disable, set "create_cloudtrail" and "create_cloudtrail_bucket" to "false".
