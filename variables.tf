@@ -11,6 +11,7 @@ variable "account_name" {
   default     = "not_set"
 }
 
+# password policy
 variable "password_min_length" {
   description = "The minimal length of passwords."
   default     = 10
@@ -31,6 +32,7 @@ variable "password_max_age" {
   default     = 0
 }
 
+# cloud trail
 variable "trail_name" {
   description = "Name of the cloudtrail trail."
   default     = "Default"
@@ -56,6 +58,7 @@ variable "trail_bucket_default_encryption_key" {
   default     = ""
 }
 
+# tags
 variable "tags" {
   description = "A map of tags to add to all resources"
   default     = {}
@@ -67,6 +70,7 @@ variable "name_tag_name" {
   default     = "Name"
 }
 
+# iam policies
 variable "create_ec2_limit_policy_name" {
   description = "Name of the IAM_Policy for EC2 Limit"
   default     = "AmazonEC2LimitInstanceCreation"
@@ -117,6 +121,7 @@ variable "create_marketplace_disable_policy" {
   default     = "0"
 }
 
+# guard duty
 variable "guardduty_enable" {
   description = "Defines if guardduty should be enabled."
   default     = 0
