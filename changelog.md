@@ -22,6 +22,7 @@ IMPROVEMENTS:
 NEW FEATURES:
 
 * Added EC2 key pair resource ([#18](https://github.com/zoitech/terraform-aws-account/issues/18))
+* Added AWS KMS key resource ([#19](https://github.com/zoitech/terraform-aws-account/issues/19))
 
 ## 0.0.6
 

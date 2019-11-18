@@ -161,3 +161,23 @@ variable "public_key" {
   description = "The public key value"
   default     = null
 }
+
+# kms keys
+variable "create_kms_keys" {
+  description = "Defines if kms key(s) should be created."
+  default     = false
+}
+
+variable "kms_keys" {
+  description = "List of kms key objects"
+  type = list(object({
+    alias_name              = string
+    description             = string
+    deletion_window_in_days = number
+    is_enabled              = bool
+    enable_key_rotation     = bool
+    #policy =
+    #tags = 
+  }))
+  default = null
+}

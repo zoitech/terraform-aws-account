@@ -16,5 +16,8 @@ locals {
   # ec key pair
   create_key_pair = (var.create_key_pair == true ? 1 : 0)
 
+  # kms keys
+  create_kms_keys = (var.create_kms_keys == true && var.kms_keys != null ? length(var.kms_keys) : 0)
+
 }
 
