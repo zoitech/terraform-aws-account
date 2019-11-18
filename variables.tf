@@ -1,15 +1,26 @@
-data "aws_caller_identity" "current" {}
-
+# region
 variable "aws_region" {
   description = "The AWS region to deploy into (e.g. us-east-1)."
   default     = "eu-central-1"
 }
+# account alias
+variable "create_account_alias" {
+  description = "Defines if an account alias should be created."
+  default     = true
+}
 
-variable "account_name" {
-  description = "The name of the account."
+variable "account_alias" {
+  description = "The alias for the account, which can be used instead of the account ID when logging in."
   default     = "not_set"
 }
 
+# account password policy
+variable "create_account_password_policy" {
+  description = "Defines if an account password policy should be created"
+  default     = true
+}
+
+# password policy
 variable "password_min_length" {
   description = "The minimal length of passwords."
   default     = 10
@@ -30,19 +41,25 @@ variable "password_max_age" {
   default     = 0
 }
 
-variable "trail_name" {
+# cloud trail
+variable "create_cloudtrail" {
+  description = "Defines if cloud trail should be created"
+  default     = true
+}
+
+variable "create_cloudtrail_bucket" {
+  description = "Defines if the bucket should be created."
+  default     = true
+}
+
+variable "cloudtrail_name" {
   description = "Name of the cloudtrail trail."
   default     = "Default"
 }
 
-variable "trail_bucketname" {
+variable "cloudtrail_bucketname" {
   description = "Name of the cloudtrail bucket. Will defaults to <account-id>-logs."
   default     = ""
-}
-
-variable "trail_bucketname_create" {
-  description = "Defines if the bucket should be created."
-  default     = 1
 }
 
 variable "trail_bucket_default_encryption" {
@@ -55,17 +72,19 @@ variable "trail_bucket_default_encryption_key" {
   default     = ""
 }
 
+# tags
 variable "tags" {
   description = "A map of tags to add to all resources"
   default     = {}
-  type        = "map"
+  type        = map(string)
 }
 
-variable "name_tag_name" {
+variable "tag_name" {
   description = "Name of the 'name' tag that is added to, for example, the S3 resources"
   default     = "Name"
 }
 
+# iam policies
 variable "create_ec2_limit_policy_name" {
   description = "Name of the IAM_Policy for EC2 Limit"
   default     = "AmazonEC2LimitInstanceCreation"
@@ -116,7 +135,14 @@ variable "create_marketplace_disable_policy" {
   default     = "0"
 }
 
-variable "guardduty_enable" {
-  description = "Defines if guardduty should be enabled."
-  default     = 0
+# guardduty detector
+variable "create_guardduty_detector" {
+  description = "Defines if guardduty detectory should be created."
+  default     = false
 }
+
+variable "enable_guardduty_detector" {
+  description = "Enable/disable guardduty detector"
+  default     = true
+}
+

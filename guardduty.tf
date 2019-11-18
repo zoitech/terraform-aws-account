@@ -1,4 +1,5 @@
 resource "aws_guardduty_detector" "main" {
-  enable = true
-  count  = "${var.guardduty_enable}"
+  count  = local.create_guardduty_detector
+  enable = var.enable_guardduty_detector
 }
+
