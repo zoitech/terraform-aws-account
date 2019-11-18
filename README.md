@@ -78,7 +78,28 @@ module "account" {
   region          = "eu-central-1"
   create_key_pair = true
   key_name        = "my-key"
-  public_key      = "rsa-ssh blahblahreplacemewithlongpublickeystring my-key-name"
+  public_key      = file(my-key-name.pub)
+}
+```
+
+### AWS KMS Keys
+
+Creating KMS keys is disabled by default.
+
+```hcl
+module "account" {
+  source          = "git::https://github.com/zoitech/terraform-aws-account.git"
+  region          = "eu-central-1"
+  create_kms_keys = true
+  kms_keys        = [
+    {
+      alias_name              = "alias/ec2"
+      description             = "Encryption/decryption of ec2 data"
+      deletion_window_in_days = 30
+      is_enabled              = true
+      enable_key_rotation     = true
+    },
+  ]
 }
 ```
 
