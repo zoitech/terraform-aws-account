@@ -13,5 +13,8 @@ locals {
   # guard duty
   create_guardduty_detector = (var.create_guardduty_detector == true ? 1 : 0)
 
+  # ec key pair
+  create_key_pair = (var.create_key_pair == true ? 1 : 0)
+
 }
 

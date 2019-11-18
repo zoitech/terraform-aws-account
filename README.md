@@ -6,11 +6,13 @@ Terraform module for managing the AWS account.
 
 This module creates the following resources:
 
-* Set account alias
-* Set password policy
-* Add a logging bucket
-* Enable CloudTail
-* Create IAM_Policy
+* Set account alias (optional)
+* Set IAM password policy (optional)
+* CloudTail (optional)
+* Create S3 logging bucket for cloudtrail (optional)
+* IAM policies (optional)
+* Guardduty (optional)
+* EC2 key pair (optional)
 
 ## Usage
 
@@ -63,6 +65,20 @@ module "account" {
   region                    = "eu-central-1"
   create_guardduty_detector = true
   enable_guardduty_detector = true
+}
+```
+
+### EC2 Key Pair
+
+Creating a key pair is disabled by default.
+
+```hcl
+module "account" {
+  source          = "git::https://github.com/zoitech/terraform-aws-account.git"
+  region          = "eu-central-1"
+  create_key_pair = true
+  key_name        = "my-key"
+  public_key      = "rsa-ssh blahblahreplacemewithlongpublickeystring my-key-name"
 }
 ```
 
