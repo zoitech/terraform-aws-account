@@ -19,7 +19,7 @@ This module creates the following resources:
 ```hcl
 module "account" {
   source              = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region              = "eu-central-1"
+  aws_region              = "eu-central-1"
 }
 ```
 
@@ -30,7 +30,7 @@ Account alias is enabled by default and has the default name "not_set".
 ```hcl
 module "account" {
   source                    = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region                    = "eu-central-1"
+  aws_region                    = "eu-central-1"
   create_acount_alias       = true
   account_alias             = "my-aws-account"
 }
@@ -47,7 +47,7 @@ The "cloudtrail_bucketname" can be the name of an existing bucket (set "create_c
 ```hcl
 module "account" {
   source                   = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region                   = "eu-central-1"
+  aws_region                   = "eu-central-1"
   create_cloudtrail        = true
   cloudtrail_name          = "my-cloudtrail"
   create_cloudtrail_bucket = true
@@ -62,7 +62,7 @@ Guardduty detector will be created and enabled by default.
 ```hcl
 module "account" {
   source                    = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region                    = "eu-central-1"
+  aws_region                    = "eu-central-1"
   create_guardduty_detector = true
   enable_guardduty_detector = true
 }
@@ -75,10 +75,10 @@ Creating a key pair is disabled by default.
 ```hcl
 module "account" {
   source          = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region          = "eu-central-1"
+  aws_region          = "eu-central-1"
   create_key_pair = true
   key_name        = "my-key"
-  public_key      = file(my-key-name.pub)
+  public_key      = file("my-key-name.pub")
 }
 ```
 
@@ -89,7 +89,7 @@ Creating KMS keys is disabled by default.
 ```hcl
 module "account" {
   source          = "git::https://github.com/zoitech/terraform-aws-account.git"
-  region          = "eu-central-1"
+  aws_region          = "eu-central-1"
   create_kms_keys = true
   kms_keys        = [
     {
@@ -110,7 +110,7 @@ To reference a tagged version of the repository:
 ```hcl
 module "network" {
   source        = "git::https://github.com/zoitech/terraform-aws-account.git?ref=v0.0.5"
-  region        = "eu-central-1"
+  aws_region        = "eu-central-1"
 }
 ```
 
