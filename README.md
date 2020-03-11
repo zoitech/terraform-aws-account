@@ -78,7 +78,7 @@ module "account" {
   aws_region          = "eu-central-1"
   create_key_pair = true
   key_name        = "my-key"
-  public_key      = file(my-key-name.pub)
+  public_key      = file("my-key-name.pub")
 }
 ```
 
