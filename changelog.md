@@ -1,3 +1,9 @@
+## 1.1.0
+
+BUG FIXES:
+
+* Fix interpolation warning message for cloudtrail bucket [24](https://github.com/zoitech/terraform-aws-account/issues/24)
+
 ## 1.0.0
 
 BACKWARDS INCOMPATIBILITIES / NOTES:
