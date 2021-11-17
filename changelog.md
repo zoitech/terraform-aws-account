@@ -1,3 +1,12 @@
+## 2.0.0
+
+ENHANCEMENTS:
+* Upgraded terraform version to 0.13  [#27](https://github.com/zoitech/terraform-aws-account/issues/27)
+
+BACKWARDS INCOMPATIBILITIES / NOTES:
+* Works with terraform 0.13.x
+
+
 ## 1.1.0
 
 BUG FIXES:

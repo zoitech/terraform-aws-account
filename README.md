@@ -109,7 +109,7 @@ To reference a tagged version of the repository:
 
 ```hcl
 module "network" {
-  source        = "git::https://github.com/zoitech/terraform-aws-account.git?ref=v0.0.5"
+  source        = "git::https://github.com/zoitech/terraform-aws-account.git?ref=2.0.0"
   aws_region        = "eu-central-1"
 }
 ```
